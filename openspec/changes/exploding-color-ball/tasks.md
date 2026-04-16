@@ -32,4 +32,4 @@
 
 - [x] 6.1 Verify no p5 reserved names used as variables (`width`, `height`, `color`, `fill`, `stroke`, `random`, `map`, `key`, etc.)
 - [x] 6.2 Open browser console — confirm zero errors on load and on explosion
-- [ ] 6.3 Click at least 3 times and confirm ball respawns each time and sound plays
+- [x] 6.3 Click at least 3 times and confirm ball respawns each time and sound plays
