@@ -75,6 +75,10 @@ function triggerExplosion() {
   state = 'exploding';
 }
 
+function mousePressed() {
+  if (state === 'idle') triggerExplosion();
+}
+
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
   ballX = width / 2;
