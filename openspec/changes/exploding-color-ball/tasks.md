@@ -1,7 +1,7 @@
 ## 1. Project scaffold
 
 - [x] 1.1 Create `index.html` with p5.js CDN script tag and a `<script src="sketch.js">` reference
-- [ ] 1.2 Create an empty `sketch.js` with `setup()` and `draw()` stubs
+- [x] 1.2 Create an empty `sketch.js` with `setup()` and `draw()` stubs
 
 ## 2. Canvas and ball
 
