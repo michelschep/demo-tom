@@ -12,6 +12,15 @@ class Particle {
     this.alpha = alphaVal;
     this.sz = sz;
   }
+
+  update() {
+    this.vy += 0.15;       // gravity
+    this.vx *= 0.97;       // friction
+    this.vy *= 0.97;
+    this.x += this.vx;
+    this.y += this.vy;
+    this.alpha -= 3;       // fade out
+  }
 }
 
 function setup() {
