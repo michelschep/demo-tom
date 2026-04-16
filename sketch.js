@@ -1,5 +1,18 @@
 let ballX, ballY;
 let state = 'idle'; // 'idle' | 'exploding'
+let particles = [];
+
+class Particle {
+  constructor(x, y, vx, vy, hue, alphaVal, sz) {
+    this.x = x;
+    this.y = y;
+    this.vx = vx;
+    this.vy = vy;
+    this.hue = hue;
+    this.alpha = alphaVal;
+    this.sz = sz;
+  }
+}
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
