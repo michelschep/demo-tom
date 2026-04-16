@@ -12,7 +12,7 @@
 
 - [x] 3.1 Define a `Particle` class/object factory with properties: `x`, `y`, `vx`, `vy`, `hue`, `alpha`, `size`
 - [x] 3.2 Implement `Particle.update()`: apply gravity (+=0.15), apply friction (*=0.97), move by velocity, decay alpha
-- [ ] 3.3 Implement `Particle.draw()`: render a filled circle using HSB colour with current alpha
+- [x] 3.3 Implement `Particle.draw()`: render a filled circle using HSB colour with current alpha
 - [ ] 3.4 In `draw()`: when state is `exploding`, update and draw all particles; remove dead ones (alpha ≤ 0)
 - [ ] 3.5 When particle array empties, transition state back to `idle` (ball respawns)
 

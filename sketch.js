@@ -21,6 +21,12 @@ class Particle {
     this.y += this.vy;
     this.alpha -= 3;       // fade out
   }
+
+  draw() {
+    noStroke();
+    fill(this.hue, 100, 100, this.alpha);
+    circle(this.x, this.y, this.sz);
+  }
 }
 
 function setup() {
