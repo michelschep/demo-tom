@@ -42,6 +42,14 @@ function draw() {
     fill(0, 0, 100);
     noStroke();
     circle(ballX, ballY, 60);
+  } else if (state === 'exploding') {
+    for (let i = particles.length - 1; i >= 0; i--) {
+      particles[i].update();
+      particles[i].draw();
+      if (particles[i].alpha <= 0) {
+        particles.splice(i, 1);
+      }
+    }
   }
 }
 
