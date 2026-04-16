@@ -5,8 +5,8 @@
 
 ## 2. Canvas and ball
 
-- [ ] 2.1 In `setup()`: create a full-window canvas (`windowWidth × windowHeight`), set `colorMode(HSB)`, store ball position at centre
-- [ ] 2.2 In `draw()`: when state is `idle`, draw the ball as a filled circle at its centre position
+- [x] 2.1 In `setup()`: create a full-window canvas (`windowWidth × windowHeight`), set `colorMode(HSB)`, store ball position at centre
+- [x] 2.2 In `draw()`: when state is `idle`, draw the ball as a filled circle at its centre position
 
 ## 3. Particle system
 
