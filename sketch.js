@@ -50,6 +50,11 @@ function draw() {
         particles.splice(i, 1);
       }
     }
+    if (particles.length === 0) {
+      ballX = width / 2;
+      ballY = height / 2;
+      state = 'idle';
+    }
   }
 }
 
