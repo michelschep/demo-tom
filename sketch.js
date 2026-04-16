@@ -1,6 +1,7 @@
 let ballX, ballY;
 let state = 'idle'; // 'idle' | 'exploding'
 let particles = [];
+let audioCtx = null;
 
 class Particle {
   constructor(x, y, vx, vy, hue, alphaVal, sz) {

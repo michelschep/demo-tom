@@ -24,7 +24,7 @@
 
 ## 5. Sound
 
-- [ ] 5.1 Initialise a module-level `AudioContext` variable (not created until first gesture)
+- [x] 5.1 Initialise a module-level `AudioContext` variable (not created until first gesture)
 - [ ] 5.2 Implement `playBoom()`: create/resume `AudioContext`, connect an `OscillatorNode` (type `sine`, start freq 120 Hz sweeping down) through a `GainNode` that decays to 0 over 0.25 s
 - [ ] 5.3 Call `playBoom()` inside `triggerExplosion()`
 
