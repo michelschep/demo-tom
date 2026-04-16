@@ -59,6 +59,28 @@ function draw() {
   }
 }
 
+function playBoom() {
+  if (!audioCtx) audioCtx = new AudioContext();
+  if (audioCtx.state === 'suspended') audioCtx.resume();
+
+  const now = audioCtx.currentTime;
+  const osc = audioCtx.createOscillator();
+  const gain = audioCtx.createGain();
+
+  osc.type = 'sine';
+  osc.frequency.setValueAtTime(120, now);
+  osc.frequency.exponentialRampToValueAtTime(30, now + 0.25);
+
+  gain.gain.setValueAtTime(1, now);
+  gain.gain.linearRampToValueAtTime(0, now + 0.25);
+
+  osc.connect(gain);
+  gain.connect(audioCtx.destination);
+
+  osc.start(now);
+  osc.stop(now + 0.25);
+}
+
 function triggerExplosion() {
   const count = Math.floor(Math.random() * 41) + 80; // 80–120
   for (let i = 0; i < count; i++) {
