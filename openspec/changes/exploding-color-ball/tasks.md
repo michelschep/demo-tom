@@ -20,7 +20,7 @@
 
 - [x] 4.1 Implement `triggerExplosion()`: spawn 80–120 particles at ball centre with random burst velocities and random hues; set state to `exploding`
 - [x] 4.2 Wire `mousePressed()` to call `triggerExplosion()` only when state is `idle`
-- [ ] 4.3 Wire `keyPressed()` to call `triggerExplosion()` only when state is `idle`
+- [x] 4.3 Wire `keyPressed()` to call `triggerExplosion()` only when state is `idle`
 
 ## 5. Sound
 
