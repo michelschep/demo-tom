@@ -58,6 +58,23 @@ function draw() {
   }
 }
 
+function triggerExplosion() {
+  const count = Math.floor(Math.random() * 41) + 80; // 80–120
+  for (let i = 0; i < count; i++) {
+    const angle = Math.random() * Math.PI * 2;
+    const speed = Math.random() * 8 + 1;
+    const hue = Math.random() * 360;
+    const sz = Math.random() * 10 + 4;
+    particles.push(new Particle(
+      ballX, ballY,
+      Math.cos(angle) * speed,
+      Math.sin(angle) * speed,
+      hue, 255, sz
+    ));
+  }
+  state = 'exploding';
+}
+
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
   ballX = width / 2;
