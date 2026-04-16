@@ -96,6 +96,7 @@ function triggerExplosion() {
     ));
   }
   state = 'exploding';
+  playBoom();
 }
 
 function mousePressed() {
