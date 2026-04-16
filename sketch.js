@@ -4,12 +4,12 @@ let particles = [];
 let audioCtx = null;
 
 class Particle {
-  constructor(x, y, vx, vy, hue, alphaVal, sz) {
+  constructor(x, y, vx, vy, hueVal, alphaVal, sz) {
     this.x = x;
     this.y = y;
     this.vx = vx;
     this.vy = vy;
-    this.hue = hue;
+    this.hueVal = hueVal;
     this.alpha = alphaVal;
     this.sz = sz;
   }
@@ -25,7 +25,7 @@ class Particle {
 
   draw() {
     noStroke();
-    fill(this.hue, 100, 100, this.alpha);
+    fill(this.hueVal, 100, 100, this.alpha);
     circle(this.x, this.y, this.sz);
   }
 }
@@ -86,13 +86,13 @@ function triggerExplosion() {
   for (let i = 0; i < count; i++) {
     const angle = Math.random() * Math.PI * 2;
     const speed = Math.random() * 8 + 1;
-    const hue = Math.random() * 360;
+    const hueVal = Math.random() * 360;
     const sz = Math.random() * 10 + 4;
     particles.push(new Particle(
       ballX, ballY,
       Math.cos(angle) * speed,
       Math.sin(angle) * speed,
-      hue, 255, sz
+      hueVal, 255, sz
     ));
   }
   state = 'exploding';
